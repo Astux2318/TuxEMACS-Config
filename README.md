@@ -3,7 +3,7 @@
 
 依赖& packages:
 
-	pacman -S ttf-monaco 
+	pacman -S ttf-monaco  Jet Brains Mono Nerd Font Bold（这个自己aur找）
  	
 	目前支持 前端 ：  nodejs css html js
 			
