@@ -1,0 +1,1 @@
+("~/code/c/terminal_src/gnome-terminal/" "~/.emacs.d/" "~/.emacs.d/elpa/lsp-bridge/")
