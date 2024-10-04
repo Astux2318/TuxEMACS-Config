@@ -1,5 +1,6 @@
 # arch linux &&  emacs-config
  	欢迎 大家使用TuxEMacs,这是一个原汁原味的emacs mode-pkgs 55个（目前）
+
 ![TuxEmacs](Tuxemacs.png "TuxEmacs")
 
 依赖& packages:
