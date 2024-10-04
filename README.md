@@ -11,7 +11,9 @@
 		emacs 下需要： M-x lsp-install-server RET ts-ls RET	
 	后端：全部 gcc clang
 	
-			
+
+
+！[TuxEmacs](TuxEmacs.png)
 
 key:
 	
@@ -42,10 +44,12 @@ key:
 
 
 ### 每次更新 报表
+
+	V0.0.4 Logo 更新 血轮眼
 	
-		V0.0.3 lisp/init-ui.el 更新相对行号
+	V0.0.3 lisp/init-ui.el 更新相对行号
 		
-		V0.0.2 支持前端及后端配置完毕
+	V0.0.2 支持前端及后端配置完毕
 
 
 

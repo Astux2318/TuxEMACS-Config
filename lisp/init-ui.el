@@ -43,16 +43,20 @@
 
 ;;启动
 (require 'dashboard)
+
 (dashboard-setup-startup-hook)
+(setq dashboard-display-icons-p t)     ; display icons on both GUI and terminal
+(setq dashboard-icon-type 'nerd-icons) ; use `nerd-icons' package
 (setq initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
-(setq dashboard-banner-logo-title "Welcome to Emacs Dashboard")
+(setq dashboard-banner-logo-title "TuxEmacs")
+(setq dashboard-startup-banner 'official)
+
 (setq dashboard-center-content t)
 (setq dashboard-show-shortcuts nil)
-(setq dashboard-items '((recents  . 5)
-                        (bookmarks . 5)
-                        (projects . 5)
-                        (agenda . 5)
-                        (registers . 5)))
+(setq dashboard-items '((recents  . 8)))
+(dashboard-modify-heading-icons '((recents   . "nf-oct-file_text")
+                                  (bookmarks . "nf-oct-book")))
+
 
 ;;Projectie
 (projectile-mode +1)
@@ -117,7 +121,7 @@
 ;(find-file-read-only . ido)
 
 ;;透明
-(set-frame-parameter nil 'alpha '(95 . 100))
+(set-frame-parameter nil 'alpha '(97 . 100))
 ;;icons
 ;(require 'all-the-icons)
 ;(display-graphic-p)
