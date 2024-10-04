@@ -14,7 +14,7 @@
 	Logo 把git clone下来的文件夹里面的emacs.png 替换 ~/.emacs/elpa/dashboard-xxxx/banners里面的emacs.png
  
 
-![TuxEmacs](https://www.imagehub.cc/image/Tuxemacs.bFncEA#pic_center)
+![TuxEmacs](~/code/TuxEmacs_Config/Tuxemacs.png "TuxEmacs")
 
 
 key:
