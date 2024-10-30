@@ -67,11 +67,8 @@
 
 
 ;;Mode
-(require 'powerline)
-(powerline-default-theme)
-(powerline-raw mode-line-mule-info nil 'l)
-(setq powerline-default-separator 'arrow)
-
+(require 'simple-modeline)
+(simple-modeline-mode)
 ;;Theme
 ; (load-theme 'leuven t)                 
 ; (setq leuven-scale-outline-headlines nil)

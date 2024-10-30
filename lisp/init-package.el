@@ -28,21 +28,16 @@
 (use-package 'neotree)
 (use-package 'org-bullets)
 (use-package 'pkg-info)
-(use-package 'powerline)
+(use-package 'simple-modeline)
 (use-package 'projectile)
 (use-package 'rich-minority)
 (use-package 'slime)
 (use-package 'dirvish)
 ;;nano
 (use-package 'nano-theme)
-;(use-package 'nano-modeline)
 ;;LSP
 (use-package 'yasnippet)
 (use-package 'gradle-mode)
-;(use-package 'lsp-mode)
-;(use-package 'lsp-java)
-;(use-package 'simple-modeline)
-
 (use-package 'web-mode)
 (use-package 'markdown-mode)
 
