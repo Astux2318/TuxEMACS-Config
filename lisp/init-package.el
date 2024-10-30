@@ -17,7 +17,6 @@
 
 (use-package 'ivy)
 (use-package 'counsel)
-(use-package 'kaolin-themes)
 (use-package 'all-the-icons)
 (use-package 'centaur-tabs)
 (use-package 'dash)
@@ -25,7 +24,6 @@
 
 (use-package 'flycheck)
 (use-package 'frame-local)
-(use-package 'leuven-theme)
 (use-package 'macrostep)
 (use-package 'neotree)
 (use-package 'org-bullets)
@@ -34,7 +32,6 @@
 (use-package 'projectile)
 (use-package 'rich-minority)
 (use-package 'slime)
-(use-package 'zenburn-theme)
 (use-package 'dirvish)
 ;;nano
 (use-package 'nano-theme)
