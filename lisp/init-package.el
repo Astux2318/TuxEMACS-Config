@@ -15,9 +15,9 @@
   (package-installed-p package))
 
 
-
+(use-package 'ivy)
+(use-package 'counsel)
 (use-package 'kaolin-themes)
-(use-package 'helm)
 (use-package 'all-the-icons)
 (use-package 'centaur-tabs)
 (use-package 'dash)
@@ -37,16 +37,16 @@
 (use-package 'zenburn-theme)
 (use-package 'dirvish)
 ;;nano
-;(use-package 'nano-theme)
-
+(use-package 'nano-theme)
+;(use-package 'nano-modeline)
 ;;LSP
 (use-package 'yasnippet)
 (use-package 'gradle-mode)
 ;(use-package 'lsp-mode)
 ;(use-package 'lsp-java)
 ;(use-package 'simple-modeline)
-(use-package 'spaceline-all-the-icons)
-(use-package 'web-mode)
 
+(use-package 'web-mode)
+(use-package 'markdown-mode)
 
 (provide 'init-package)

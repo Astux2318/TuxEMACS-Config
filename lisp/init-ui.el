@@ -33,7 +33,7 @@
 ;;Fonts
 ;(set-face-attribute 'default nil :font "hack 16")
 ;(set-face-attribute 'default nil :font "IBM Plex Sans   16")
-(set-face-attribute 'default nil :font "Jet Brains Mono Nerd Font Bold 17")
+(set-face-attribute 'default nil :font "Jet Brains Mono Nerd Font Bold 18")
 ;; 快速打开配置文件
 (defun open-init-file()
  (interactive)
@@ -67,9 +67,6 @@
 
 
 ;;Mode
-;(require 'simple-modeline)
-;(simple-modeline-mode)
-;(after-init . simple-modeline-mode)
 (require 'powerline)
 (powerline-default-theme)
 (powerline-raw mode-line-mule-info nil 'l)
@@ -83,12 +80,13 @@
 ;(load-theme 'zenburn t)
 ;(load-theme 'srcery t)
 
-(require 'kaolin-themes)
-(load-theme 'kaolin-shiva t)
-(kaolin-treemacs-theme)
-;(setq kaolin-ocean-alt-bg t)
-(kaolin-treemacs-theme)
+;(require 'kaolin-themes)
+;(load-theme 'kaolin-shiva t)
+;(kaolin-treemacs-theme)
+;(load-theme 'kaolin-mono-light t)
+;(kaolin-treemacs-theme)
 
+(load-theme 'nano-dark t)
 
 
 
@@ -111,28 +109,38 @@
 (global-set-key [f8] 'neotree-toggle)
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
-;;helm
-(require 'helm)
-(require 'helm-autoloads)
-(global-set-key (kbd "M-x") #'helm-M-x)
-(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
-(global-set-key (kbd "C-x C-f") #'helm-find-files)
-(helm-mode 1)
-;(find-file-read-only . ido)
+;;ivy
+(ivy-mode)
+(setq ivy-use-virtual-buffers t)
+(setq enable-recursive-minibuffers t)
+;; enable this if you want `swiper' to use it
+ (setq search-default-mode #'char-fold-to-regexp)
+(global-set-key "\C-s" 'swiper)
+(global-set-key (kbd "C-c C-r") 'ivy-resume)
+(global-set-key (kbd "<f6>") 'ivy-resume)
+(global-set-key (kbd "M-x") 'counsel-M-x)
+(global-set-key (kbd "C-x C-f") 'counsel-find-file)
+(global-set-key (kbd "<f1> f") 'counsel-describe-function)
+(global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+(global-set-key (kbd "<f1> o") 'counsel-describe-symbol)
+(global-set-key (kbd "<f1> l") 'counsel-find-library)
+(global-set-key (kbd "<f5> i") 'counsel-info-lookup-symbol)
+(global-set-key (kbd "<f5> u") 'counsel-unicode-char)
+(global-set-key (kbd "C-c g") 'counsel-git)
+(global-set-key (kbd "C-c j") 'counsel-git-grep)
+(global-set-key (kbd "C-c k") 'counsel-ag)
+(global-set-key (kbd "C-x l") 'counsel-locate)
+(global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
+(define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
+
 
 ;;透明
 (set-frame-parameter nil 'alpha '(97 . 100))
 ;;icons
-;(require 'all-the-icons)
-;(display-graphic-p)
-;(insert (all-the-icons-icon-for-file "foo.js"))
+(require 'all-the-icons)
+(display-graphic-p)
+(insert (all-the-icons-icon-for-file "foo.js"))
 
-(require 'spaceline-all-the-icons)
-(spaceline-all-the-icons--setup-anzu)            ;; Enable anzu searching
-;(spaceline-all-the-icons--setup-package-updates) ;; Enable package update indicator
-(spaceline-all-the-icons--setup-git-ahead)       ;; Enable # of commits ahead of upstream in git
-(spaceline-all-the-icons--setup-paradox)         ;; Enable Paradox mode line
-(spaceline-all-the-icons--setup-neotree)         ;; Enable Neotree mode line
 
 
 (provide 'init-ui)
