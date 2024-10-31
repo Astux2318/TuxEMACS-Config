@@ -67,68 +67,49 @@
 
 
 ;;Mode
-(require 'simple-modeline)
-(simple-modeline-mode)
-;;Theme
-; (load-theme 'leuven t)                 
-; (setq leuven-scale-outline-headlines nil)
-; (setq leuven-scale-org-agenda-structure nil)
-;(setq leuven-scale-volatile-highlight nil)
-;(load-theme 'zenburn t)
-;(load-theme 'srcery t)
+(require 'doom-modeline)
+(doom-modeline-mode 1)
+(setq doom-modeline-support-imenu t)
+(setq doom-modeline-height 25)
+(setq doom-modeline-bar-width 4)
+(setq doom-modeline-hud nil)
+(setq doom-modeline-window-width-limit 85)
+(setq doom-modeline-project-detection 'auto)
+(setq doom-modeline-icon t)
+(setq doom-modeline-major-mode-icon t)
+(setq doom-modeline-major-mode-color-icon t)
+(setq doom-modeline-buffer-state-icon t)
+(setq doom-modeline-buffer-modification-icon t)
 
-;(require 'kaolin-themes)
-;(load-theme 'kaolin-shiva t)
-;(kaolin-treemacs-theme)
-;(load-theme 'kaolin-mono-light t)
-;(kaolin-treemacs-theme)
 
-(load-theme 'nano-dark t)
+
 
 
 
 ;;顶部TAB
 (require 'centaur-tabs)
 (centaur-tabs-mode t)
-(setq centaur-tabs-style "zigzag")
+(setq centaur-tabs-style "bar")
 (setq centaur-tabs-plain-icons t)
 (setq centaur-tabs-gray-out-icons 'buffer)
 (setq centaur-tabs-set-bar 'left)
 (setq centaur-tabs-set-bar 'over)
 (setq centaur-tabs-height 32)
 (setq centaur-tabs-set-icons t)
+(global-set-key (kbd "C-h") 'centaur-tabs-backward)
+(global-set-key (kbd "C-g") 'centaur-tabs-forward)
+;;Theme
 
-(global-set-key (kbd "C-g")  'centaur-tabs-backward)
-(global-set-key (kbd "C-h") 'centaur-tabs-forward)
+(load-theme 'nano-dark t)
+
+
 
 ;;NeoTREE
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
-;;ivy
-(ivy-mode)
-(setq ivy-use-virtual-buffers t)
-(setq enable-recursive-minibuffers t)
-;; enable this if you want `swiper' to use it
- (setq search-default-mode #'char-fold-to-regexp)
-(global-set-key "\C-s" 'swiper)
-(global-set-key (kbd "C-c C-r") 'ivy-resume)
-(global-set-key (kbd "<f6>") 'ivy-resume)
-(global-set-key (kbd "M-x") 'counsel-M-x)
-(global-set-key (kbd "C-x C-f") 'counsel-find-file)
-(global-set-key (kbd "<f1> f") 'counsel-describe-function)
-(global-set-key (kbd "<f1> v") 'counsel-describe-variable)
-(global-set-key (kbd "<f1> o") 'counsel-describe-symbol)
-(global-set-key (kbd "<f1> l") 'counsel-find-library)
-(global-set-key (kbd "<f5> i") 'counsel-info-lookup-symbol)
-(global-set-key (kbd "<f5> u") 'counsel-unicode-char)
-(global-set-key (kbd "C-c g") 'counsel-git)
-(global-set-key (kbd "C-c j") 'counsel-git-grep)
-(global-set-key (kbd "C-c k") 'counsel-ag)
-(global-set-key (kbd "C-x l") 'counsel-locate)
-(global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
-(define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
+;;helm
 
 
 ;;透明
